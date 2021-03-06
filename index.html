@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Workgram</title>
+
+    <link rel="stylesheet" href="css/libs.min.css">
+    <style>@font-face{font-family:Montserrat-Regular;src:local("Montserrat-Regular"),local("Montserrat Regular"),url(fonts/Montserrat-Regular.woff2) format("woff2"),url(fonts/Montserrat-Regular.woff) format("woff"),url(fonts/Montserrat-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Montserrat-Medium;src:local("Montserrat-Medium"),local("Montserrat Medium"),url(fonts/Montserrat-Medium.woff2) format("woff2"),url(fonts/Montserrat-Medium.woff) format("woff"),url(fonts/Montserrat-Medium.ttf) format("truetype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Montserrat-SemiBold;src:local("Montserrat-SemiBold"),local("Montserrat SemiBold"),url(fonts/Montserrat-SemiBold.woff2) format("woff2"),url(fonts/Montserrat-SemiBold.woff) format("woff"),url(fonts/Montserrat-SemiBold.ttf) format("truetype");font-weight:600;font-style:normal;font-display:swap}html{-webkit-box-sizing:border-box;box-sizing:border-box;scroll-behavior:smooth;overflow-x:hidden}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}a{text-decoration:none;color:inherit;display:inline-block}p{margin:0}li,ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;font-weight:400}button{padding:0;outline:0;cursor:pointer}body{min-height:100vh;max-width:100vw;font-size:16px;line-height:20px;font-family:Montserrat-Regular,sans-serif;font-weight:400;overflow-x:hidden;min-width:320px;color:#e6e8f4;background:#161a2c;background-repeat:no-repeat;position:relative}body::before{content:'';position:absolute;width:100vw;height:100vh;top:0;left:0;background:-o-radial-gradient(51.12% .96%,67.65% 91.45%,#721cdf 0,rgba(22,26,44,0) 100%),#161a2c;background:radial-gradient(67.65% 91.45% at 51.12% .96%,#721cdf 0,rgba(22,26,44,0) 100%),#161a2c;z-index:-1}.container{max-width:1188px;padding:0 24px;margin:0 auto}.map__bg{position:absolute;top:168px;right:0;left:0;margin:0 auto;z-index:-1}.map__bg img{max-width:100vw}.header{background:rgba(24,26,33,.7)}.header__inner{height:72px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.footer{background:rgba(24,26,33,.7);-webkit-backdrop-filter:blur(50px);backdrop-filter:blur(50px)}.footer__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:24px 0;-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.footer__politics-link{font-size:14px;line-height:17px;font-family:Montserrat-Medium,sans-serif;font-weight:500;color:#99a4d1;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;margin-top:-5px}.footer__politics-link:hover{color:#e6e8f4}.form__inner{padding:96px 0 128px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.form__form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-height:80px}.form__input-wrapper{position:relative}.form__select{display:inline-block!important}.form__select--vacancy{max-width:229px}.form__input{width:100%;border:2px solid #3391ff;border-radius:16px;padding:43px 24px 17px;background:rgba(230,232,244,.05);-webkit-box-shadow:0 4px 35px rgba(22,26,44,.15);box-shadow:0 4px 35px rgba(22,26,44,.15);color:#e6e8f4;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;outline:0;font-family:Montserrat-SemiBold,sans-serif;font-weight:600}.form__input::-webkit-input-placeholder{font-size:16px;line-height:20px;color:#99a4d1;font-family:Montserrat-Regular,sans-serif;font-weight:400}.form__input::-moz-placeholder{font-size:16px;line-height:20px;color:#99a4d1;font-family:Montserrat-Regular,sans-serif;font-weight:400}.form__input:-ms-input-placeholder{font-size:16px;line-height:20px;color:#99a4d1;font-family:Montserrat-Regular,sans-serif;font-weight:400}.form__input::-ms-input-placeholder{font-size:16px;line-height:20px;color:#99a4d1;font-family:Montserrat-Regular,sans-serif;font-weight:400}.form__input::placeholder{font-size:16px;line-height:20px;color:#99a4d1;font-family:Montserrat-Regular,sans-serif;font-weight:400}.form__input:focus{border-color:#2cffb3}.form__input--city{max-width:248px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.form__input--phone{max-width:199px}.form__input--name{min-width:329px;max-width:329px}.form__input-descr{font-size:12px;line-height:15px;text-transform:uppercase;font-family:Montserrat-SemiBold,sans-serif;font-weight:600;position:absolute;top:16px;left:24px;color:#e6e8f4;pointer-events:none}.form__input-fill{display:none;position:absolute;top:87px;left:24px;margin:0 auto;font-size:12px;line-height:15px;color:#ff7d7d}.form__button{position:relative;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;max-width:121px}.form__btn{background:rgba(230,232,244,.05);border:2px solid #2cffb3;background:rgba(230,232,244,.05);-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:16px;max-height:80px;padding:24px 47px 22px 54px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:121px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.form__btn--active{cursor:pointer;background-color:#2cffb3}.form__btn--active svg path{stroke:#161a2c}.form__btn-check{display:none}.form__button--sendtext{display:none;font-size:0;line-height:44px;letter-spacing:-.03em;margin-left:56px;font-family:Montserrat-SemiBold,sans-serif;font-weight:600;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.form__button--sendrequest{display:none;position:absolute;margin:0 auto;left:0;right:0;bottom:-35px;text-align:center;opacity:0;-webkit-transition:all 3s;-o-transition:all 3s;transition:all 3s}.form__button--sendmore{color:#2cffb3;font-family:Montserrat-SemiBold,sans-serif;font-weight:600;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;border-bottom:2px solid transparent}.form__button--sendmore:hover{color:#fff;border-color:#fff}.selectric-hover .selectric{border-color:#2cffb3}select{visibility:hidden}.selectric-hide-select select{visibility:visible}.selectric{width:100%;border:2px solid #3391ff;border-radius:16px;padding:43px 24px 17px;background:rgba(230,232,244,.05);-webkit-box-shadow:0 4px 35px rgba(22,26,44,.15);box-shadow:0 4px 35px rgba(22,26,44,.15);color:#99a4d1;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;outline:0;min-width:229px;width:100%}.selectric .button{display:none}.selectric .label{margin:0;font-size:16px;line-height:20px;color:#99a4d1;height:unset;font-family:Montserrat-SemiBold,sans-serif;font-weight:600}.selectric .label--placeholder{font-family:Montserrat-Regular,sans-serif;font-weight:400}.selectric-items{margin-top:8px}.selectric-open .selectric-items{z-index:15!important}.selectric-items{height:auto!important;border-radius:16px;border:2px solid #2cffb3;background:rgba(153,164,209,.1);-webkit-box-shadow:0 4px 35px rgba(22,26,44,.15);box-shadow:0 4px 35px rgba(22,26,44,.15)}.selectric-items .selectric-scroll{overflow:hidden;height:auto}.selectric-items .selectric-scroll ul{font-family:Montserrat-SemiBold,sans-serif;font-weight:600;color:#99a4d1}.selectric-items .selectric-scroll ul li.selected,.selectric-items .selectric-scroll ul li:hover{background:rgba(230,232,244,.05);color:#2cffb3}.selectric-items .selectric-scroll ul li{font-size:16px;line-height:20px;padding:16px 24px;color:#99a4d1}.selectric-items .selectric-scroll ul li:first-child{display:none}.selectric-items .selectric-scroll ul li:first-child{border-radius:16px 16px 0 0}.we-find__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;padding-bottom:200px}.we-find__title{font-size:48px;line-height:59px;letter-spacing:-.03em;color:#e6e8f4;font-family:Montserrat-SemiBold,sans-serif;font-weight:600}.we-find__text{max-width:300px;color:#99a4d1;font-family:Montserrat-Medium,sans-serif;font-weight:500;margin-bottom:7px}.we-find__text span{display:block}.company__inner{max-width:1268px;margin:0 auto;background:rgba(15,18,31,.6);border-radius:16px;padding:0 24px}.company__items{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;max-width:1140px;margin:0 auto;padding:64px 0 62px}.company__item{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:58px;padding:0 50px}</style>
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+    <script>!function (e) { "use strict"; var t = function (t, n, r, o) { var i, a = e.document, d = a.createElement("link"); if (n) i = n; else { var f = (a.body || a.getElementsByTagName("head")[0]).childNodes; i = f[f.length - 1] } var l = a.styleSheets; if (o) for (var s in o) o.hasOwnProperty(s) && d.setAttribute(s, o[s]); d.rel = "stylesheet", d.href = t, d.media = "only x", function e(t) { if (a.body) return t(); setTimeout(function () { e(t) }) }(function () { i.parentNode.insertBefore(d, n ? i : i.nextSibling) }); var u = function (e) { for (var t = d.href, n = l.length; n--;)if (l[n].href === t) return e(); setTimeout(function () { u(e) }) }; function c() { d.addEventListener && d.removeEventListener("load", c), d.media = r || "all" } return d.addEventListener && d.addEventListener("load", c), d.onloadcssdefined = u, u(c), d }; "undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t }("undefined" != typeof global ? global : this); function onloadCSS(n, a) { var t; function d() { !t && a && (t = !0, a.call(n)) } n.addEventListener && n.addEventListener("load", d), n.attachEvent && n.attachEvent("onload", d), "isApplicationInstalled" in navigator && "onloadcssdefined" in n && n.onloadcssdefined(d) }</script>
+    <script>
+       var stylesheet = loadCSS("css/style.min.css");
+    </script>
+</head>
+
+<body>
+
+    <div class="map__bg">
+        <img src="images/map.svg" alt="">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="form" id="form">
+        <div class="container">
+            <div class="form__inner">
+                <form class="form__form" onsubmit="return false" id='form'>
+                    <p class="form__warn">
+                        Отправляя заявку, вы соглашаетесь с <a class='form__warn-open' href="#warn">правилами</a> обработки персональных данных.
+                    </p>
+                    <div class="form__warn-block mfp-hide" id='warn'>
+                        <div class="form__warn-blockwrapper">
+                            <h1 class="form__warn-title">
+                                Соглашение с уловиями обработки персональных данных
+                            </h1>
+                            <p class="form__warn-text">
+                                Указывая номер телефона, вы даете согласие на обработку своих персональных данных в соответствии с Федеральным Законом от 27.07.2006 года № 152-ФЗ «О персональных данных» на условиях и для целей, определенных в этой заявке, в течение срока, необходимого для достижения указанных целей и 2 лет после их достижения.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form__input-wrapper wow slideInLeft" data-wow-duration='.5s' id='form-select'>
+                        <select class="form__select form__select--vacancy" type="text" name='vacancy'>
+                            <option value="none" style="font-family: 'Montserrat-Regular', sans-serif">
+                                Кем хотите работать?
+                            </option>
+                            <option value="tikTok">
+                                TikTok блогер
+                            </option>
+                            <option value="youtube">
+                                YouTube блогер
+                            </option>
+                            <option value="instagram">
+                                Instagram блогер
+                            </option>
+                            <option value="deliver">
+                                Курьер
+                            </option>
+                            <option value="driver">
+                                Водитель
+                            </option>
+                            <option value="collector">
+                                Сборщик товаров
+                            </option>
+                        </select>
+                        <span class="form__input-descr">вакансия</span>
+                        <span class="form__input-fill">
+                            Заполните пожалуйста поле
+                        </span>
+                    </div>
+                    <div class="form__input-wrapper wow slideInDown" data-wow-duration='1s'>
+                        <input class="form__input form__input--city" type="text" placeholder="Где хотите работать?"
+                            id="city" name='city'>
+                        <span class="form__input-descr">Город</span>
+                        <span class="form__input-fill">
+                            Заполните пожалуйста поле
+                        </span>
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input class="form__input form__input--phone" type="tel" placeholder="+7" id="phone"
+                            name='phone'>
+                        <span class="form__input-descr">Телефон</span>
+                        <span class="form__input-fill">
+                            Укажите ваш телефон
+                        </span>
+                    </div>
+                    <div class="form__input-wrapper wow slideInDown" data-wow-duration='1s'>
+                        <input class="form__input form__input--name" type="text"
+                            placeholder="Введите Фамилию Имя Отчество" id="name" name='name'>
+                        <span class="form__input-descr">ФИО</span>
+                        <span class="form__input-fill">
+                            Введите вашу Фамилию Имя Отчество
+                        </span>
+                    </div>
+                    <div class="form__button" data-wow-offset='0'>
+                        <p class="form__button--sendtext">
+                            Благодарим! Ваша заявка отправлена успешно
+                        </p>
+                        <p class="form__button--sendrequest">
+                            Ожидайте звонка в течении суток.
+                            <a class="form__button--sendmore" href="#">
+                                Отправить заявку на еще одну вакансию
+                            </a>
+                        </p>
+                        <button class="form__btn wow slideInRight" data-wow-duration='.5s' type="submit">
+                            <svg class="form__btn-arrow" width="21" height="34" viewBox="0 0 21 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L17 17L3 31" stroke="#2CFFB3" stroke-width="5" stroke-linecap="round" />
+                            </svg>
+                            <svg class="form__btn-check" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 17L11 24L27 8" stroke="#161A2C" stroke-width="5" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="we-find">
+        <div class="container">
+            <div class="we-find__inner">
+                <h1 class="we-find__title">
+                    Найдём для вас работу <br>
+                    или подработку по всей России!
+                </h1>
+                <p class="we-find__text">
+                    <span>Оставьте заявку</span>
+                    и вам гарантированно перезвонят!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="company">
+        <div class="company__inner">
+            <div class="company__items">
+                <div class="company__item">
+                    <picture>
+                        <source srcset="images/company-1.webp">
+                        <img src="images/company-1.png">
+                    </picture>
+                </div>
+                <div class="company__item">
+                    <picture>
+                        <source srcset="images/company-2.webp">
+                        <img src="images/company-2.png">
+                    </picture>
+                </div>
+                <div class="company__item">
+                    <img src="images/company-3.svg" alt="">
+                </div>
+                <div class="company__item">
+                    <picture>
+                        <source srcset="images/company-4.webp">
+                        <img src="images/company-4.png">
+                    </picture>
+                </div>
+                <div class="company__item">
+                    <picture>
+                        <source srcset="images/company-5.webp">
+                        <img src="images/company-5.png">
+                    </picture>
+                </div>
+                <div class="company__item">
+                    <picture>
+                        <source srcset="images/company-6.webp">
+                        <img src="images/company-6.png">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how">
+        <div class="container">
+            <div class="how__inner">
+                <div class="how__inner-card">
+                    <h2 class="how__title">
+                        Как это работает?
+                    </h2>
+                    <p class="how__subtitle">
+                        в 4000 городах России
+                    </p>
+                    <ul class="how__list">
+                        <li class="how__list-item">
+                            <span class="how__list-numb">1</span>
+                            <p class="how__list-text">
+                                Выбираете вакансию
+                            </p>
+                        </li>
+                        <li class="how__list-item">
+                            <span class="how__list-numb">2</span>
+                            <p class="how__list-text">
+                                Отправляете заявку
+                            </p>
+                        </li>
+                        <li class="how__list-item">
+                            <span class="how__list-numb">3</span>
+                            <p class="how__list-text">
+                                И вам перезванивают менеджеры
+                                одной или нескольких компаний!
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="how__inner-img">
+                        <picture>
+                            <source srcset="images/woman.webp">
+                            <img src="images/woman.png">
+                        </picture>
+                    </div>
+                </div>
+                <div class="how__inner-linkwrapper">
+                    <a class="how__inner-link wow bounceIn" data-wow-delay='.7s' href="#form">
+                        <span>Начать работать</span>
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L1 11" stroke="#161A2C" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a class="logo" href="#">
+                    <img src="images/logo.svg" alt="">
+                </a>
+                <span class="footer__politics-linkwrapper">
+                    <a class="footer__politics-link" id='politics' href="terms.html">Политика конфидициальности</a> и <a class="footer__politics-link" id='terms' href='terms.html'>Пользовательское соглашение</a> 
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src='js/libs.min.js'></script>
+    <script src='js/cities.js'></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
